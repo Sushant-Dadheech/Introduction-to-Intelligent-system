@@ -12,6 +12,7 @@ Each practical explores core AI algorithms implemented in Python.
 | 1 | Travelling Salesman Problem | BFS, DFS, A* | [View Code](./tsp_algorithms.py) | ✅ Done |
 | 2 | Heuristic Search Algorithms | Simulated Annealing, Genetic Algorithm | [View Code](./heuristic_search.py) | ✅ Done |
 | 3 | ML Models Implementation | Supervised & Unsupervised Learning | [View Code](./ml_algorithms.py) | ✅ Done |
+| 4 | Inference Engine | Forward Chaining Rule-Based System | [View Code](./inference_engine.py) | ✅ Done |
 
 ## 🛠️ Tech Stack
 - Python
