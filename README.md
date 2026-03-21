@@ -13,6 +13,8 @@ Each practical explores core AI algorithms implemented in Python.
 | 2 | Heuristic Search Algorithms | Simulated Annealing, Genetic Algorithm | [View Code](./heuristic_search.py) | ✅ Done |
 | 3 | ML Models Implementation | Supervised & Unsupervised Learning | [View Code](./ml_algorithms.py) | ✅ Done |
 | 4 | Inference Engine | Forward Chaining Rule-Based System | [View Code](./inference_engine.py) | ✅ Done |
+| 5 | Neural Network Training - Part 1 | Multi-layer Perceptron (MLP) | [View Code](./neural_network_training_part1.py) | ✅ Done |
+| 6 | Neural Network Training - Part 2 | Multi-layer Perceptron (MLP) | [View Code](./neural_network_training_part2.py) | ✅ Done |
 
 ## 🛠️ Tech Stack
 - Python
