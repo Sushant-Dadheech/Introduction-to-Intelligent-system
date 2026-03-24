@@ -17,6 +17,7 @@ Each practical explores core AI algorithms implemented in Python.
 | 6 | Neural Network Training - Part 2 | Multi-layer Perceptron (MLP) | [View Code](./neural_network_training_part2.py) | ✅ Done |
 | 7 | Q-Learning Algorithm | Reinforcement Learning | [View Code](./q_learning.py) | ✅ Done |
 | 8 | Medical Expert System | Forward Chaining | [View Code](./medical_expert_system.py) | ✅ Done |
+| 9 | Bayesian Network | Probability Mapping (pgmpy) | [View Code](./bayesian_network.py) | ✅ Done |
 
 ## 🛠️ Tech Stack
 - Python
