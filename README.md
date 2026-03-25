@@ -18,6 +18,7 @@ Each practical explores core AI algorithms implemented in Python.
 | 7 | Q-Learning Algorithm | Reinforcement Learning | [View Code](./q_learning.py) | ✅ Done |
 | 8 | Medical Expert System | Forward Chaining | [View Code](./medical_expert_system.py) | ✅ Done |
 | 9 | Bayesian Network | Probability Mapping (pgmpy) | [View Code](./bayesian_network.py) | ✅ Done |
+| 10 | Comparative Analysis | K-Means, Logistic Regression, Random Forest | [View Code](./comparative_analysis.py) | ✅ Done |
 
 ## 🛠️ Tech Stack
 - Python
