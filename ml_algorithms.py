@@ -1,3 +1,23 @@
+
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
 ### Complete Implementation for Google Colab
 # ---
 # **Supervised Learning:** Linear Regression, Logistic Regression, Decision Tree, Random Forest,
@@ -44,7 +64,7 @@ from tensorflow.keras import layers
 
 plt.style.use('seaborn-v0_8-whitegrid')
 sns.set_palette('husl')
-print('■ All libraries loaded!')
+typing_print('■ All libraries loaded!')
 
 # ---
 # # ■ PART 1 — SUPERVISED LEARNING
@@ -65,7 +85,7 @@ lr.fit(X_tr, y_tr)
 y_pred = lr.predict(X_te)
 
 # # ■■ Metrics ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-print('=== Linear Regression ===')
+typing_print('=== Linear Regression ===')
 print(f'Coefficient : {lr.coef_[0]:.4f}')
 print(f'Intercept : {lr.intercept_:.4f}')
 print(f'RMSE : {np.sqrt(mean_squared_error(y_te, y_pred)):.4f}')
@@ -98,7 +118,7 @@ log_reg = LogisticRegression(max_iter=200, random_state=42)
 log_reg.fit(X_tr_s, y_train)
 y_pred = log_reg.predict(X_te_s)
 
-print('=== Logistic Regression ===')
+typing_print('=== Logistic Regression ===')
 print(f'Accuracy: {accuracy_score(y_test, y_pred)*100:.2f}%')
 print(classification_report(y_test, y_pred, target_names=iris.target_names))
 
@@ -116,7 +136,7 @@ dt = DecisionTreeClassifier(max_depth=4, random_state=42)
 dt.fit(X_train, y_train)
 y_pred_dt = dt.predict(X_test)
 
-print('=== Decision Tree ===')
+typing_print('=== Decision Tree ===')
 print(f'Accuracy : {accuracy_score(y_test, y_pred_dt)*100:.2f}%')
 print(f'Tree Depth : {dt.get_depth()}')
 print(f'Num Leaves : {dt.get_n_leaves()}')
@@ -138,7 +158,7 @@ rf = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
 rf.fit(X_train, y_train)
 y_pred_rf = rf.predict(X_test)
 
-print('=== Random Forest ===')
+typing_print('=== Random Forest ===')
 print(f'Accuracy: {accuracy_score(y_test, y_pred_rf)*100:.2f}%')
 print(classification_report(y_test, y_pred_rf, target_names=iris.target_names))
 
@@ -195,7 +215,7 @@ knn_best = KNeighborsClassifier(n_neighbors=best_k)
 knn_best.fit(X_tr_s, y_train)
 y_pred_knn = knn_best.predict(X_te_s)
 
-print('=== K-Nearest Neighbors ===')
+typing_print('=== K-Nearest Neighbors ===')
 print(f'Best K : {best_k}')
 print(f'Accuracy : {accuracy_score(y_test, y_pred_knn)*100:.2f}%')
 
@@ -217,7 +237,7 @@ nb = GaussianNB()
 nb.fit(X_train, y_train)
 y_pred_nb = nb.predict(X_test)
 
-print('=== Naive Bayes ===')
+typing_print('=== Naive Bayes ===')
 print(f'Accuracy: {accuracy_score(y_test, y_pred_nb)*100:.2f}%')
 print(classification_report(y_test, y_pred_nb, target_names=iris.target_names))
 
@@ -246,7 +266,7 @@ models = {
 }
 results = {}
 
-print('=== Model Comparison ===')
+typing_print('=== Model Comparison ===')
 for name, model in models.items():
  model.fit(X_tr_s, y_train)
  acc = accuracy_score(y_test, model.predict(X_te_s))
@@ -287,7 +307,7 @@ best_k_km = K_range[np.argmax(sil_scores)]
 kmeans = KMeans(n_clusters=best_k_km, random_state=42, n_init=10)
 km_labels = kmeans.fit_predict(X_blob)
 
-print('=== K-Means Clustering ===')
+typing_print('=== K-Means Clustering ===')
 print(f'Best K : {best_k_km}')
 print(f'Silhouette Score : {silhouette_score(X_blob, km_labels):.4f}')
 
@@ -315,7 +335,7 @@ link_mat = linkage(X_hc, method='ward')
 hc = AgglomerativeClustering(n_clusters=4, linkage='ward')
 hc_labels = hc.fit_predict(X_blob)
 
-print('=== Hierarchical Clustering ===')
+typing_print('=== Hierarchical Clustering ===')
 print(f'Silhouette Score: {silhouette_score(X_blob, hc_labels):.4f}')
 
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
@@ -340,7 +360,7 @@ db_labels = db.fit_predict(X_moon)
 n_clusters = len(set(db_labels)) - (1 if -1 in db_labels else 0)
 n_noise = list(db_labels).count(-1)
 
-print('=== DBSCAN ===')
+typing_print('=== DBSCAN ===')
 print(f'Clusters found : {n_clusters}')
 print(f'Noise points : {n_noise}')
 
@@ -366,7 +386,7 @@ cumvar = np.cumsum(pca_full.explained_variance_ratio_) * 100
 pca_2d = PCA(n_components=2, random_state=42)
 X_pca = pca_2d.fit_transform(X_wine)
 
-print('=== PCA ===')
+typing_print('=== PCA ===')
 print(f'Original features : {X_wine.shape[1]}')
 print(f'PC1 variance : {pca_full.explained_variance_ratio_[0]*100:.2f}%')
 print(f'PC2 variance : {pca_full.explained_variance_ratio_[1]*100:.2f}%')
@@ -418,7 +438,7 @@ X_encoded = encoder.predict(X_ae)
 X_reconstructed = autoencoder.predict(X_ae)
 rec_errors = np.mean(np.square(X_ae - X_reconstructed), axis=1)
 
-print('=== Autoencoder ===')
+typing_print('=== Autoencoder ===')
 print(f'Mean Reconstruction Error : {np.mean(rec_errors):.6f}')
 print(f'Max Reconstruction Error : {np.max(rec_errors):.6f}')
 
@@ -458,4 +478,4 @@ summary = pd.DataFrame({
 })
 
 print(summary.to_string(index=False))
-print('\n■ All algorithms implemented successfully!')
+typing_print('\n■ All algorithms implemented successfully!')

@@ -1,3 +1,23 @@
+
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
 # Question One - Inference Engine Implementation
 # Sushant Dadheech
 # ku_id - Ku2407u814
@@ -31,9 +51,9 @@ class InferenceEngine:
 
 
 # --- Example 1: Medical Diagnosis ---
-print("=" * 50)
-print("Example 1: Medical Diagnosis Inference")
-print("=" * 50)
+typing_print("=" * 50, delay=0.002)
+typing_print("Example 1: Medical Diagnosis Inference")
+typing_print("=" * 50, delay=0.002)
 
 engine = InferenceEngine()
 
@@ -55,8 +75,8 @@ print(f"\nFinal Facts Known: {final_knowledge_base}")
 # ============================================
 
 print("\n" + "=" * 50)
-print("Example 2: Daily Decision Inference")
-print("=" * 50)
+typing_print("Example 2: Daily Decision Inference")
+typing_print("=" * 50, delay=0.002)
 
 engine2 = InferenceEngine()
 

@@ -3,6 +3,26 @@ Comparative Analysis Practical
 K-Means Clustering, Logistic Regression, and Random Forest on Breast Cancer Data.
 """
 
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, LabelEncoder
@@ -68,21 +88,21 @@ rf_acc = accuracy_score(y_test, rf_preds)
 rf_f1 = f1_score(y_test, rf_preds)
 
 print("\n" + "="*40)
-print(" MODEL COMPARISON SUMMARY")
-print("="*40)
+typing_print(" MODEL COMPARISON SUMMARY")
+typing_print("="*40, delay=0.002)
 print(f"K-Means (Unsupervised)")
 print(f" -> Silhouette Score: {sil_score:.4f} (Closer to 1 is better)")
-print("-" * 40)
+typing_print("-" * 40, delay=0.002)
 print(f"Logistic Regression (Supervised)")
 print(f" -> Accuracy: {lr_acc:.4f}")
 print(f" -> F1-Score: {lr_f1:.4f}")
-print("-" * 40)
+typing_print("-" * 40, delay=0.002)
 print(f"Random Forest (Supervised)")
 print(f" -> Accuracy: {rf_acc:.4f}")
 print(f" -> F1-Score: {rf_f1:.4f}")
-print("="*40)
+typing_print("="*40, delay=0.002)
 
-print("Justification:")
+typing_print("Justification:")
 print("I used K-Means to explore the natural, unbiased groupings of the cells,\n"
       "Logistic Regression to establish a highly interpretable baseline,\n"
       "and Random Forest to capture complex, non-linear patterns\n"

@@ -1,3 +1,23 @@
+
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
 # BFS, DFS and A* Algorithms for TSP
 # Name: Sushant Dadheech
 

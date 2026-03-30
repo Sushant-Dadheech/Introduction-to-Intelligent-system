@@ -3,6 +3,26 @@ Q-Learning Algorithm Implementation
 Reinforcement learning to find the optimal path to a goal state.
 """
 
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
+
 import numpy as np
 import random
 
@@ -31,7 +51,7 @@ for episode in range(num_episodes):
         Q[state, action] = R[state, action] + gamma * np.max(Q[next_state])
         state = next_state
 
-print("Q-table after training:\n")
+typing_print("Q-table after training:\n")
 print(Q.astype(int))
 
 # Path finder
@@ -44,6 +64,6 @@ def optimal_path(start):
         state = next_state
     return path
 
-print("\nOptimal Paths:\n")
+typing_print("\nOptimal Paths:\n")
 for i in range(6):
     print(f"From state {i}: {optimal_path(i)}")

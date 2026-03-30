@@ -3,6 +3,26 @@ Neural Network Training and Hyper-parameter Tuning - Part 1
 Multi-layer neural network for income prediction using age and experience.
 """
 
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
+
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -73,9 +93,9 @@ print(f"Test MAE: {mae:.4f}")
 predictions_scaled = model.predict(X_test)
 predictions = scaler_Y.inverse_transform(predictions_scaled).flatten()
 
-print("\n--- Sample Predictions ---")
+typing_print("\n--- Sample Predictions ---")
 print(f"{'Actual':>12} {'Predicted':>12} {'Error':>10}")
-print("-" * 38)
+typing_print("-" * 38, delay=0.002)
 for actual, pred in zip(Y_test, predictions):
     error = actual - pred
     print(f"${actual:>10,.0f} ${pred:>10,.2f} {error:>+10.2f}")

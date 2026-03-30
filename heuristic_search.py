@@ -1,3 +1,23 @@
+
+import time
+import sys
+
+def typing_print(text, delay=0.01):
+    for char in str(text):
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def loading_animation(message="Loading"):
+    sys.stdout.write(message)
+    sys.stdout.flush()
+    for _ in range(3):
+        time.sleep(0.3)
+        sys.stdout.write(".")
+        sys.stdout.flush()
+    typing_print("\n")
+
 # ============================================================
 #: Heuristic Search Algorithms
 # Name: Sushant Dadheech
@@ -40,11 +60,11 @@ def simulated_annealing():
 
 best_x, best_val, history = simulated_annealing()
 
-print("=" * 45)
-print("🔵 Simulated Annealing Result")
+typing_print("=" * 45, delay=0.002)
+typing_print("🔵 Simulated Annealing Result")
 print(f"   Best x      : {best_x}")
 print(f"   Minimum value: {best_val}")
-print("=" * 45)
+typing_print("=" * 45, delay=0.002)
 
 plt.plot(history)
 plt.xlabel("Iterations")
@@ -91,10 +111,10 @@ def genetic_algorithm():
 
 best_x, best_val, history = genetic_algorithm()
 
-print("🟢 Genetic Algorithm Result")
+typing_print("🟢 Genetic Algorithm Result")
 print(f"   Best x      : {best_x}")
 print(f"   Minimum value: {best_val}")
-print("=" * 45)
+typing_print("=" * 45, delay=0.002)
 
 plt.plot(history)
 plt.xlabel("Generations")
