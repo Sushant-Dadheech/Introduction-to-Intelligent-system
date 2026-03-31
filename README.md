@@ -19,6 +19,7 @@ Each practical explores core AI algorithms implemented in Python.
 | 8 | Medical Expert System | Forward Chaining | [View Code](./medical_expert_system.py) | ✅ Done |
 | 9 | Bayesian Network | Probability Mapping (pgmpy) | [View Code](./bayesian_network.py) | ✅ Done |
 | 10 | Comparative Analysis | K-Means, Logistic Regression, Random Forest | [View Code](./comparative_analysis.py) | ✅ Done |
+| 11 | Mini RAG Pipeline | TF-IDF Cosine Similarity, Local Ollama LLM | [View Code](./mini_rag_pipeline.py) | 🆕 New |
 
 ## 🛠️ Tech Stack
 - Python
