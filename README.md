@@ -20,7 +20,8 @@ Each practical explores core AI algorithms implemented in Python.
 | 9 | Bayesian Network | Probability Mapping (pgmpy) | [View Code](./bayesian_network.py) | ✅ Done |
 | 10 | Comparative Analysis | K-Means, Logistic Regression, Random Forest | [View Code](./comparative_analysis.py) | ✅ Done |
 | 11 | Mini RAG Pipeline | TF-IDF Cosine Similarity, Local Ollama LLM | [View Code](./mini_rag_pipeline.py) | ✅ Done |
-| 12 | Constraint Satisfaction Problem (CSP) | Graph Coloring (OR-Tools, NetworkX) | [View Code](./csp_graph_coloring.py) | 🆕 New |
+| 12 | Constraint Satisfaction Problem (CSP) | Graph Coloring (OR-Tools, NetworkX) | [View Code](./csp_graph_coloring.py) | ✅ Done |
+| 13 | Mini AI Agent (ReAct) | Reasoning & Acting Framework, Ollama LLM, Tool Use | [View Code](./mini_ai_agent.py) | 🆕 New |
 
 ## 🛠️ Tech Stack
 - Python
