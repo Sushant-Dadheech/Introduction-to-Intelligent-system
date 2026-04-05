@@ -30,8 +30,13 @@ Each practical explores core AI algorithms implemented in Python.
 - AI
 
 ## ▶️ How to Run
-1. Open any `.py` file
-2. Copy the code
-3. Paste in Google Colab and run!
+
+### Interactive Dashboard (Recommended)
+You can explore the entire repository interactively through the CLI Dashboard!
+1. Open your terminal in this repository.
+2. Run `python main.py`
+3. Enter the number of the project you want to run!
+
+*Alternatively, you can manually run any individual `.py` script or copy/paste it into Google Colab.*
 
 > "Intelligence is the ability to adapt to change." – Stephen Hawking
