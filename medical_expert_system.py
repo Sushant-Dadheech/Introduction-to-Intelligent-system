@@ -32,7 +32,7 @@ rules = {
     "covid":   {"fever", "cough", "loss of smell", "tiredness"}
 }
 
-def forward_chaining(facts, rules):
+def forward_chaining(facts, rules): 
     conclusions = []
     for disease, symptoms in rules.items():
         if symptoms.issubset(facts):

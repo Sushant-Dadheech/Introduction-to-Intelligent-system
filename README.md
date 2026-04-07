@@ -22,7 +22,8 @@ Each practical explores core AI algorithms implemented in Python.
 | 11 | Mini RAG Pipeline | TF-IDF Cosine Similarity, Local Ollama LLM | [View Code](./mini_rag_pipeline.py) | ✅ Done |
 | 12 | Constraint Satisfaction Problem (CSP) | Graph Coloring (OR-Tools, NetworkX) | [View Code](./csp_graph_coloring.py) | ✅ Done |
 | 13 | Mini AI Agent (ReAct) | Reasoning & Acting Framework, Ollama LLM, Tool Use | [View Code](./mini_ai_agent.py) | ✅ Done |
-| 14 | Transformers: Self-Attention | Numpy Matrix Math, Embeddings, Softmax, QKV Vectors | [View Code](./self_attention_scratch.py) | 🆕 New |
+| 14 | Transformers: Self-Attention | Numpy Matrix Math, Embeddings, Softmax, QKV Vectors | [View Code](./self_attention_scratch.py) | ✅ Done |
+| 15 | Deep Learning LSTM | Stock Prediction (yfinance, Keras, MinMaxScaler) | [View Code](./stock_price_lstm.py) | 🆕 New |
 
 ## 🛠️ Tech Stack
 - Python
@@ -30,13 +31,8 @@ Each practical explores core AI algorithms implemented in Python.
 - AI
 
 ## ▶️ How to Run
-
-### Interactive Dashboard (Recommended)
-You can explore the entire repository interactively through the CLI Dashboard!
-1. Open your terminal in this repository.
-2. Run `python main.py`
-3. Enter the number of the project you want to run!
-
-*Alternatively, you can manually run any individual `.py` script or copy/paste it into Google Colab.*
+1. Open any `.py` file
+2. Copy the code
+3. Paste in Google Colab and run!
 
 > "Intelligence is the ability to adapt to change." – Stephen Hawking
