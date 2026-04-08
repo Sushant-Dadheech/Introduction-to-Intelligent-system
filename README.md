@@ -23,8 +23,9 @@ Each practical explores core AI algorithms implemented in Python.
 | 12 | Constraint Satisfaction Problem (CSP) | Graph Coloring (OR-Tools, NetworkX) | [View Code](./csp_graph_coloring.py) | ✅ Done |
 | 13 | Mini AI Agent (ReAct) | Reasoning & Acting Framework, Ollama LLM, Tool Use | [View Code](./mini_ai_agent.py) | ✅ Done |
 | 14 | Transformers: Self-Attention | Numpy Matrix Math, Embeddings, Softmax, QKV Vectors | [View Code](./self_attention_scratch.py) | ✅ Done |
-| 15 | Deep Learning LSTM | Stock Prediction (yfinance, Keras, MinMaxScaler) | [View Code](./stock_price_lstm.py) | 🆕 New |
-
+| 15 | Deep Learning LSTM | Stock Prediction (yfinance, Keras, MinMaxScaler) | [View Code](./stock_price_lstm.py) | ✅ Done |
+| 16 | Genetic Algorithm | String Evolution, Selection, Crossover, Mutation | [View Code](./genetic_algorithm.py) | ✅ Done |
+| 17 | Stock Price Prediction Notebook | Data Analysis & LSTM Forecasting | [View Code](./01_Stock_Price_Prediction.ipynb) | 🆕 New |
 ## 🛠️ Tech Stack
 - Python
 - Google Colab
