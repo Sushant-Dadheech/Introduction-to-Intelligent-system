@@ -25,7 +25,8 @@ Each practical explores core AI algorithms implemented in Python.
 | 14 | Transformers: Self-Attention | Numpy Matrix Math, Embeddings, Softmax, QKV Vectors | [View Code](./self_attention_scratch.py) | ✅ Done |
 | 15 | Deep Learning LSTM | Stock Prediction (yfinance, Keras, MinMaxScaler) | [View Code](./stock_price_lstm.py) | ✅ Done |
 | 16 | Genetic Algorithm | String Evolution, Selection, Crossover, Mutation | [View Code](./genetic_algorithm.py) | ✅ Done |
-| 17 | Stock Price Prediction Notebook | Data Analysis & LSTM Forecasting | [View Code](./01_Stock_Price_Prediction.ipynb) | 🆕 New |
+| 17 | Stock Price Prediction Notebook | Data Analysis & LSTM Forecasting | [View Code](./01_Stock_Price_Prediction.ipynb) | ✅ Done |
+| 18 | Medical Expert System - Part 2 | Backward Chaining | [View Code](./medical_expert_system_part2.py) | 🆕 New |
 ## 🛠️ Tech Stack
 - Python
 - Google Colab
