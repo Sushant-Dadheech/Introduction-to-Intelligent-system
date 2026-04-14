@@ -30,7 +30,8 @@ Each practical explores core AI algorithms implemented in Python.
 | 19 | Sales Forecasting Notebook | Time Series Analysis & Machine Learning | [View Code](./03_Sales_Forecasting.ipynb) | ✅ Done |
 | 20 | Weather Forecasting Notebook | Data Science and Predictive Modeling | [View Code](./02_Weather_Forecasting.ipynb) | ✅ Done |
 | 21 | Minimax Algorithm | Game Theory Adversarial Search (Tic-Tac-Toe) | [View Code](./minimax_tic_tac_toe.py) | ✅ Done |
-| 22 | Cellular Automata | Artificial Life (Conway's Game of Life) | [View Code](./cellular_automata.py) | 🆕 New |
+| 22 | Cellular Automata | Artificial Life (Conway's Game of Life) | [View Code](./cellular_automata.py) | ✅ Done |
+| 23 | Markov Chain Text Generator | Generative AI & NLP Probabilistic Modeling | [View Code](./markov_chain.py) | 🆕 New |
 ## 🛠️ Tech Stack
 - Python
 - Google Colab
